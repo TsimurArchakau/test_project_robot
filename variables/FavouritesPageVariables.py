@@ -1,0 +1,5 @@
+products_in_favorites = "//*[@class='product-tile   js-product-tile  ']"
+removed_product = "(//*[@class='product-tile   js-product-tile  '])[2]"
+favorites_heart_button = "(//*[@class='wishlist-icon__svg wishlist-icon__svg--full'])[1]"
+empty_favorites_notification = "//*[@class='wishlist__msg-empty']"
+website_logo = "//*[@class='header-logo__wrapper']"
