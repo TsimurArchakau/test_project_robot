@@ -1,0 +1,27 @@
+name: Automated tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: install dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: robot --outputdir test_results test_cases/
+        continue-on-error: true
+      - name: Upload test_results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test_results
+          path: test_results
+          retention-days: 1
