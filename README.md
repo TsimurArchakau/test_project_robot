@@ -28,7 +28,7 @@ Setting up deployment to GitHub pages from GitHub Actions:
 
 - Navigate to *GitHub -> Actions -> Automated tests* and click on **Run workflow**.
 
-Once the test run is complete, a test_result artifact is created. It contains:
+Once the test run is complete, a test_result artifact is created. It contains the following files:
 
 - log.html
 - output.xml
